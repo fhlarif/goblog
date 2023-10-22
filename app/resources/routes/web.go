@@ -9,14 +9,8 @@ import (
 
 func Routes(r *gin.Engine) {
 	r.GET("/", func(c *gin.Context) {
-		renderer.View(c, http.StatusOK, "modules/view/index", gin.H{
+		renderer.View(c, http.StatusOK, "resources/view/index", gin.H{
 			"title": "Index Page",
-		})
-	})
-
-	r.GET("/about", func(c *gin.Context) {
-		renderer.View(c, http.StatusOK, "modules/view/about", gin.H{
-			"title": "About Page",
 		})
 	})
 }
