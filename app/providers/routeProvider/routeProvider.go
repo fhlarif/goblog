@@ -1,7 +1,7 @@
 package routeprovider
 
 import (
-	web "github.com/fhlarif/goblog/app/modules/routes"
+	web "github.com/fhlarif/goblog/app/resources/routes"
 	"github.com/gin-gonic/gin"
 )
 

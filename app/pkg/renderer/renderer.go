@@ -10,7 +10,7 @@ func LoadHTML(router *gin.Engine) {
 }
 
 func LoadStatic(router *gin.Engine) {
-	router.Static("/app/assets", "./app/assets")
+	router.Static("/app/resources/assets", "./app/resources/assets")
 }
 
 func View(c *gin.Context, code int, page string, data gin.H) {
