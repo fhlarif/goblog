@@ -1,27 +1,29 @@
-# FILEPATH: /path/to/project/main.go
+# Project Index: /path/to/project/main.go
 
-"""
-This script serves the app and runs Tailwind's watch command.
+## Steps
 
-To serve the app, run the script using the command:
+1. `cd` into the project.
+
+2. Ensure the `env.yaml` is present. Copy it from `app/env/env.yaml.example` and edit the content if necessary.
+
+```bash
+cp app/env/env.yaml.example app/env/env.yaml
+```
+
+3. To serve the app, run the go script using the following command. This will start the Go development server and make the app available at `http://localhost:8000`. The port is based on the `env.yaml` file.
 
 ```bash
 go run main.go serve
 ```
 
-This will start the Go development server and make the app available at http://localhost:8000.
-
-To run Tailwind's watch command, make sure you have installed Tailwind and its dependencies.
+4. To run Tailwind's watch command, make sure you have installed Tailwind and its dependencies.
 
 ```bash
 pnpm i
 ```
 
-Then, run the command:
+5. Then, run the following command. This will watch for changes in the source CSS file and automatically rebuild the output file.
 
 ```bash
 npx tailwindcss -i ./app/resources/assets/css/main.css -o ./app/resources/assets/dist/output.css --build
 ```
-
-This will watch for changes in the source CSS file and automatically rebuild the output file.
-"""
